@@ -1,0 +1,343 @@
+/* WHY CHOOSE */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.why-card {
+  background: var(--white);
+  padding: 40px 30px;
+  border-radius: var(--radius-md);
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-strong);
+}
+
+.why-icon {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--maroon), var(--burgundy));
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.why-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.why-card p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+/* ABOUT PREVIEW */
+.about-preview-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-preview-images {
+  position: relative;
+}
+
+.img-main {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-strong);
+}
+
+.img-sub {
+  position: absolute;
+  bottom: -40px;
+  right: -30px;
+  width: 55%;
+  border: 6px solid var(--off-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-strong);
+}
+
+.about-stat-badge {
+  position: absolute;
+  top: -24px;
+  left: -24px;
+  background: var(--gold);
+  color: var(--maroon-dark);
+  padding: 20px 26px;
+  border-radius: var(--radius-md);
+  text-align: center;
+  box-shadow: 0 14px 30px rgba(212,175,55,0.4);
+}
+
+.about-stat-badge h3 {
+  color: var(--maroon-dark);
+  font-size: 1.6rem;
+}
+
+.about-stat-badge p {
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.about-preview-content h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-bottom: 20px;
+}
+
+.about-preview-content > p {
+  color: var(--text-muted);
+  margin-bottom: 22px;
+}
+
+.about-points {
+  margin-bottom: 30px;
+}
+
+.about-points li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 10px;
+  font-size: 0.94rem;
+  color: var(--charcoal-soft);
+}
+
+.about-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.about-stats-row {
+  display: flex;
+  gap: 34px;
+  margin-bottom: 34px;
+  flex-wrap: wrap;
+}
+
+.about-stats-row h4 {
+  color: var(--maroon);
+  font-size: 1.5rem;
+}
+
+.about-stats-row span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* SERVICES */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.section-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* WEDDING GRID */
+.wedding-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* DECORATION GRID */
+.decor-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.decor-card {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  box-shadow: var(--shadow-soft);
+}
+
+.decor-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.decor-card:hover img {
+  transform: scale(1.15);
+}
+
+.decor-card-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  background: linear-gradient(180deg, transparent 50%, rgba(36,20,20,0.85));
+}
+
+.decor-card-label span {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* BIHAR CULTURE */
+.bihar-culture {
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1604881991720-f91add269bed?auto=format&fit=crop&w=1600&q=80') center/cover fixed;
+  color: var(--white);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.bihar-culture-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(36,20,20,0.92), rgba(110,20,35,0.85));
+}
+
+.bihar-culture > .mithila-border {
+  position: relative;
+  z-index: 2;
+}
+
+.bihar-culture-content {
+  position: relative;
+  z-index: 2;
+  padding: 70px 0;
+}
+
+.bihar-hindi-tag {
+  display: block;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--gold-light);
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.bihar-closing-line {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-style: italic;
+  color: var(--gold-light);
+  font-size: 1.1rem;
+  margin-top: 46px;
+}
+
+.bihar-culture .section-title h2,
+.bihar-culture .section-title p,
+.bihar-culture .eyebrow {
+  color: var(--white);
+}
+
+.bihar-culture .eyebrow { color: var(--gold-light); }
+.bihar-culture .section-title p { color: rgba(255,255,255,0.75); }
+
+.bihar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.bihar-point {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius-md);
+  padding: 32px 26px;
+  backdrop-filter: blur(6px);
+  transition: transform var(--transition), background var(--transition);
+}
+
+.bihar-point:hover {
+  transform: translateY(-6px);
+  background: rgba(255,255,255,0.1);
+}
+
+.bihar-point h4 {
+  color: var(--gold-light);
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.bihar-point p {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.92rem;
+}
+
+/* PACKAGES */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+  align-items: stretch;
+}
+
+/* FINAL CTA */
+.final-cta {
+  background: linear-gradient(135deg, var(--maroon), var(--maroon-dark));
+  padding: 90px 0;
+  text-align: center;
+  color: var(--white);
+}
+
+.final-cta-content h2 {
+  color: var(--white);
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  margin-bottom: 16px;
+}
+
+.final-cta-content p {
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 32px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .decor-grid { grid-template-columns: repeat(3, 1fr); }
+  .packages-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 992px) {
+  .why-grid, .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .wedding-grid { grid-template-columns: repeat(2, 1fr); }
+  .bihar-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-preview-grid { grid-template-columns: 1fr; }
+  .about-preview-images { margin-bottom: 60px; }
+}
+
+@media (max-width: 768px) {
+  .decor-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 576px) {
+  .why-grid, .services-grid, .wedding-grid, .bihar-grid, .packages-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-stats-row { gap: 24px; }
+  .img-sub { width: 60%; right: -10px; bottom: -30px; }
+  .about-stat-badge { left: 0; top: -20px; padding: 14px 18px; }
+}

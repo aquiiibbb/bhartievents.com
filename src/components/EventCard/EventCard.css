@@ -1,0 +1,56 @@
+.event-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+}
+
+.event-card-image {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.event-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.event-card:hover .event-card-image img {
+  transform: scale(1.14) rotate(0.5deg);
+}
+
+.event-card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 26px 22px;
+  background: linear-gradient(180deg, transparent 40%, rgba(36,20,20,0.9));
+  color: var(--white);
+}
+
+.event-card-overlay h4 {
+  color: var(--white);
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+  transform: translateY(6px);
+  transition: transform var(--transition);
+}
+
+.event-card-overlay p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.85);
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height var(--transition), opacity var(--transition);
+}
+
+.event-card:hover .event-card-overlay p {
+  max-height: 100px;
+  opacity: 1;
+}

@@ -1,0 +1,26 @@
+.mithila-border {
+  width: 100%;
+  height: 34px;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.mithila-border.mithila-flip {
+  transform: scaleY(-1);
+}
+
+.mithila-gold {
+  color: var(--gold);
+  opacity: 0.85;
+}
+
+.mithila-maroon {
+  color: var(--maroon);
+  opacity: 0.5;
+}
+
+@media (max-width: 576px) {
+  .mithila-border {
+    height: 24px;
+  }
+}

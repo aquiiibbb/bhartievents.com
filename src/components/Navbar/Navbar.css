@@ -1,0 +1,242 @@
+/* ================= Root Navbar ================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: linear-gradient(180deg, rgba(36, 20, 20, 0.6), rgba(36, 20, 20, 0));
+  transition: all 0.3s ease-in-out;
+  padding: 18px 0;
+}
+
+.navbar-scrolled {
+  background: rgba(250, 247, 242, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 10px 0;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ================= Logo Styles ================= */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  z-index: 1101;
+}
+
+/* Logo sizing & aspect ratio fix */
+.logo-image {
+  height: 44px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  transition: height 0.3s ease, transform 0.3s ease;
+  display: block;
+}
+
+.navbar-scrolled .logo-image {
+  height: 38px;
+}
+
+.logo-text {
+  font-family: var(--font-heading, serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.navbar:not(.navbar-scrolled) .logo-text {
+  color: var(--white, #ffffff);
+}
+
+.navbar-scrolled .logo-text {
+  color: var(--maroon-dark, #2b1113);
+}
+
+.logo-text em {
+  font-style: normal;
+  color: var(--gold, #d4af37);
+}
+
+/* ================= Desktop Navigation ================= */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.25s ease;
+}
+
+.navbar:not(.navbar-scrolled) .navbar-links a {
+  color: var(--off-white, #f4f4f4);
+}
+
+.navbar-scrolled .navbar-links a {
+  color: var(--charcoal, #333333);
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold, #d4af37);
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover::after,
+.navbar-links a.active::after {
+  width: 100%;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active {
+  color: var(--gold, #d4af37) !important;
+}
+
+/* ================= Actions & Buttons ================= */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar-mobile-cta {
+  display: none;
+}
+
+.navbar-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 4px;
+  transition: color 0.3s ease;
+}
+
+.navbar:not(.navbar-scrolled) .navbar-toggle {
+  color: var(--white, #ffffff);
+}
+
+.navbar-scrolled .navbar-toggle {
+  color: var(--maroon-dark, #2b1113);
+}
+
+/* ================= Mobile & Tablet Responsive ================= */
+@media (max-width: 992px) {
+  .logo-image {
+    height: 38px;
+  }
+
+  .navbar-scrolled .logo-image {
+    height: 34px;
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
+  }
+
+  .navbar-cta {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1200;
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: min(300px, 80vw);
+    background: #ffffff;
+    z-index: 1100;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 100px 30px 40px;
+    gap: 20px;
+    transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -8px 0 25px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .navbar-links.open {
+    right: 0;
+  }
+
+  .navbar-links a {
+    color: var(--charcoal, #222222) !important;
+    font-size: 1.05rem;
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  .navbar-links a.active {
+    color: var(--gold, #d4af37) !important;
+    font-weight: 600;
+  }
+
+  .navbar-mobile-cta {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .navbar-mobile-cta .btn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* ================= Backdrop ================= */
+.navbar-backdrop {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 1050;
+  animation: fadeInBackdrop 0.25s ease-out;
+}
+
+@keyframes fadeInBackdrop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
