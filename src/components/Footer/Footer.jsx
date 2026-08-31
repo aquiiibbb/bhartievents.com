@@ -55,7 +55,7 @@ const Footer = () => {
         <div className="footer-col">
           <h4>Contact</h4>
           <ul className="footer-contact">
-            <li><FaMapMarkerAlt /> Kalyanpur Chauk, Bihar, India</li>
+            <li><FaMapMarkerAlt />Bhagwanpur Parsauni Kishun East Champaran 845416</li>
             <li><FaPhoneAlt /> +91 89699 56612</li>
             <li><FaEnvelope /> hello@bhartievents.in</li>
           </ul>
@@ -64,6 +64,8 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <p>&copy; 2026 Bharti Events. All Rights Reserved.</p>
+                <p>&copy;Devloper Aquib ali</p>
+
       </div>
     </footer>
   )
