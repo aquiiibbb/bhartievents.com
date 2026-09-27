@@ -57,7 +57,7 @@ const Footer = () => {
           <ul className="footer-contact">
             <li><FaMapMarkerAlt />Bhagwanpur Parsauni Kishun East Champaran 845416</li>
             <li><FaPhoneAlt /> +91 89699 56612</li>
-            <li><FaEnvelope /> hello@bhartievents.in</li>
+            <li><FaEnvelope />bhartidecorationevent@email.com</li>
           </ul>
         </div>
       </div>

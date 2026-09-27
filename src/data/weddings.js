@@ -26,7 +26,7 @@ const weddingCategories = [
   {
     id: 'reception',
     title: 'Reception',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnxEkft844p2hYamqqZW3lobcrMgGn7zuwmPJVoV1ZSQ&s=10',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL3Uivf43z7srqHKpgIwm5If0qIFmF_x-s7oaOGW0c5Q&s=10',
     description: 'Elegant reception stages designed to make the new couple\'s entry unforgettable.',
   },
   {
